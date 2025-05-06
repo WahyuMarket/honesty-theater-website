@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Honesty Theater - GTA SAMP Roleplay</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #0f0f0f, #1a1a1a);
+      color: #fff;
+      text-align: center;
+      padding: 0;
+    }
+    .hero {
+      padding: 80px 20px 50px;
+      background: radial-gradient(circle at center, #111 0%, #000 100%);
+      box-shadow: inset 0 0 50px #000;
+    }
+    .hero h1 {
+      font-size: 3em;
+      color: #00eaff;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.2em;
+      color: #ccc;
+      max-width: 700px;
+      margin: 0 auto 30px;
+      line-height: 1.6;
+    }
+    .ip-box {
+      font-size: 1.1em;
+      background: #222;
+      display: inline-block;
+      padding: 12px 25px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      box-shadow: 0 0 10px #00eaff44;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .ip-box:hover {
+      background: #333;
+    }
+    .cta-button {
+      background-color: #ff3c00;
+      color: #fff;
+      border: none;
+      padding: 15px 40px;
+      font-size: 1.1em;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .cta-button:hover {
+      background-color: #e63600;
+      transform: scale(1.05);
+    }
+    .staff {
+      margin: 50px auto 20px;
+      max-width: 600px;
+      background: #1c1c1c;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+    .staff h2 {
+      color: #00eaff;
+      margin-bottom: 20px;
+    }
+    .staff p {
+      margin: 5px 0;
+      font-size: 1em;
+    }
+    footer {
+      margin: 40px 0 20px;
+      font-size: 0.9em;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <h1>Selamat Datang di Honesty Theater</h1>
+    <p>
+      Rasakan dunia penuh konflik, kekuasaan, dan cerita epik di Honesty Theater.  
+      Bangun keluarga kriminalmu, rebut wilayah, atau jadilah penegak hukum yang disegani.  
+      Setiap langkahmu adalah bagian dari kisah besar yang terus berkembang!
+    </p>
+    <div class="ip-box" onclick="copyIP()">Klik untuk salin IP Server: <span id="server-ip">103.151.140.215:7006</span></div><br><br>
+    <button class="cta-button" onclick="window.location.href='https://discord.gg/9GNdUTyM'">Join Discord & Gabung Sekarang!</button>
+  </div>
+
+  <div class="staff">
+    <h2>Tim Kami</h2>
+    <p><strong>Founder:</strong> Gerry, Lazzy</p>
+    <p><strong>Owner:</strong> Wahyu</p>
+    <p><strong>Co-Owner:</strong> Geo</p>
+    <p><strong>Developer:</strong> Gerry</p>
+    <p><strong>Admin:</strong> Luthfy</p>
+  </div>
+
+  <footer>© 2025 Honesty Theater - © Wahyu - 777.</footer>
+
+  <script>
+    function copyIP() {
+      const ip = document.getElementById("server-ip").textContent;
+      navigator.clipboard.writeText(ip);
+      alert("IP berhasil disalin: " + ip);
+    }
+  </script>
+</body>
+</html>
