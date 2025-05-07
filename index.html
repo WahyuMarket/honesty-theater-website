@@ -1,115 +1,171 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html><html lang="id"><head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Honesty Theater - GTA SAMP Roleplay</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to bottom right, #0f0f0f, #1a1a1a);
-      color: #fff;
-      text-align: center;
       padding: 0;
-    }
-    .hero {
-      padding: 80px 20px 50px;
-      background: radial-gradient(circle at center, #111 0%, #000 100%);
-      box-shadow: inset 0 0 50px #000;
-    }
-    .hero h1 {
-      font-size: 3em;
-      color: #00eaff;
-      margin-bottom: 10px;
-    }
-    .hero p {
-      font-size: 1.2em;
-      color: #ccc;
-      max-width: 700px;
-      margin: 0 auto 30px;
-      line-height: 1.6;
-    }
-    .ip-box {
-      font-size: 1.1em;
-      background: #222;
-      display: inline-block;
-      padding: 12px 25px;
-      border-radius: 8px;
-      margin-bottom: 30px;
-      box-shadow: 0 0 10px #00eaff44;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    .ip-box:hover {
-      background: #333;
-    }
-    .cta-button {
-      background-color: #ff3c00;
-      color: #fff;
-      border: none;
-      padding: 15px 40px;
-      font-size: 1.1em;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.3s, transform 0.2s;
-    }
-    .cta-button:hover {
-      background-color: #e63600;
-      transform: scale(1.05);
-    }
-    .staff {
-      margin: 50px auto 20px;
-      max-width: 600px;
-      background: #1c1c1c;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    }
-    .staff h2 {
-      color: #00eaff;
-      margin-bottom: 20px;
-    }
-    .staff p {
-      margin: 5px 0;
-      font-size: 1em;
-    }
-    footer {
-      margin: 40px 0 20px;
-      font-size: 0.9em;
-      color: #777;
-    }
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }body {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: white;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+header {
+  text-align: center;
+  padding: 60px 20px 20px;
+}
+
+header h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+}
+
+header h1 span {
+  color: #ff4da6;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 1.1em;
+  color: #ddd;
+}
+
+.ip-box {
+  background: rgba(255, 255, 255, 0.1);
+  margin: 30px auto;
+  padding: 15px 20px;
+  width: fit-content;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ip-box:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.buttons a {
+  padding: 12px 25px;
+  border-radius: 10px;
+  background: #ff4da6;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 0 15px #ff4da6;
+  transition: 0.3s;
+}
+
+.buttons a:hover {
+  background: #ff1f8f;
+  transform: scale(1.05);
+}
+
+.team {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 30px;
+  margin: 30px auto;
+  max-width: 800px;
+  border-radius: 16px;
+}
+
+.team h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.6em;
+}
+
+.team p {
+  line-height: 1.6;
+  font-size: 1em;
+}
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  margin: 20px 0;
+}
+
+.marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 15s linear infinite;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+@keyframes marquee {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-100%, 0); }
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  color: #aaa;
+}
+
   </style>
-</head>
-<body>
-  <div class="hero">
-    <h1>Selamat Datang di Honesty Theater</h1>
-    <p>
-      Rasakan dunia penuh konflik, kekuasaan, dan cerita epik di Honesty Theater.  
-      Bangun keluarga kriminalmu, rebut wilayah, atau jadilah penegak hukum yang disegani.  
-      Setiap langkahmu adalah bagian dari kisah besar yang terus berkembang!
-    </p>
-    <div class="ip-box" onclick="copyIP()">Klik untuk salin IP Server: <span id="server-ip">103.151.140.215:7006</span></div><br><br>
-    <button class="cta-button" onclick="window.location.href='https://discord.gg/9GNdUTyM'">Join Discord & Gabung Sekarang!</button>
-  </div>
-
-  <div class="staff">
+</head><body>
+  <header>
+    <h1>Selamat Datang di <span>Honesty Theater</span></h1>
+    <p>Rasakan dunia penuh konflik, kekuasaan, dan cerita epik di Honesty Theater. Bangun keluarga kriminalmu, rebut wilayah, atau jadilah penegak hukum yang disegani.</p>
+  </header>  <div class="ip-box" onclick="navigator.clipboard.writeText('103.151.140.215:7006')">
+    Klik untuk salin IP Server: 103.151.140.215:7006
+  </div>  <div class="buttons">
+    <a href="#">Gabung Discord</a>
+    <a href="#">Komunitas WhatsApp</a>
+    <a href="#">Tiktok Kami</a>
+  </div>  <div class="marquee">
+    <span>Honesty Theater - GTA SAMP Roleplay penuh aksi, konflik, dan persahabatan. Bergabung sekarang! #HONESTYONTOP</span>
+  </div>  <div class="team">
     <h2>Tim Kami</h2>
-    <p><strong>Founder:</strong> Gerry, Lazzy</p>
-    <p><strong>Owner:</strong> Wahyu</p>
-    <p><strong>Co-Owner:</strong> Geo</p>
-    <p><strong>Developer:</strong> Gerry</p>
-    <p><strong>Admin:</strong> Luthfy</p>
-  </div>
+    <p><strong>Founder:</strong> Gerry, Lazzy<br>
+      <strong>Owner:</strong> Wahyu<br>
+      <strong>Co-Owner:</strong> Geo<br>
+      <strong>Developer:</strong> Gerry<br>
+      <strong>Head-Admin:</strong> Luthfy</p>
+  </div>  <div class="team">
+    <h2>Cerita Kami</h2>
+    <p>Awalnya cuma iseng, akhirnya lahir sebuah kota kecil yang dinamain Medan City. Kota ini dibuat dan diurus sendiri sama Gerry, yang dari 2022 sampai 2025 nggak pernah nyerah buat ngejaga kota itu, walaupun sering banget kena masalah, ditinggal orang, atau dihujat.<br><br>Lama-lama kota itu makin rame. Muncullah Lazzy, yang awalnya sering banget bikin rusuh dan ngacak-ngacak kota. Tapi justru dari situ, dia malah jadi deket sama Gerry, dan akhirnya diangkat jadi founder bareng.<br><br>
 
-  <footer>© 2025 Honesty Theater - © Wahyu - 777.</footer>
+Pace juga sempat muncul—awalnya sering rusuh juga, ikut bikin ribut di kota. Tapi lama-kelamaan dia berubah. Dia jadi admin, bantuin player baru, ngajarin cara main, dan ngebangun vibe yang asik. Tapi ya, namanya manusia, ada naik turun. Di satu titik, Pace memutuskan buat keluar dari tim admin karena satu dan lain hal. Tapi pengaruhnya tetap kerasa di kota.<br><br>
 
-  <script>
-    function copyIP() {
-      const ip = document.getElementById("server-ip").textContent;
-      navigator.clipboard.writeText(ip);
-      alert("IP berhasil disalin: " + ip);
-    }
-  </script>
-</body>
-</html>
+Terus ada Geo, yang ngajak Wahyu buat main bareng di server. Dari situ mereka mulai bantu bangun komunitas. Geo orangnya tenang dan fokus, sementara Wahyu punya semangat dan loyalitas tinggi buat jaga kota tetap hidup.<br><br>
+
+Nggak ketinggalan, Ucok—orangnya nyeleneh, kocak, tapi punya loyalitas tinggi juga. Dia sering jadi pemecah suasana dan bikin kota ini penuh warna.<br><br>
+
+Dari kota kecil yang dulu cuma jadi tempat ngumpul pas gabut, sekarang udah tumbuh jadi Honesty Theater—kota besar yang penuh cerita. Semua orang punya andil. Di sini, bukan cuma soal main, tapi soal perjalanan, konflik, perubahan, dan kebersamaan.</p>
+
+
+<div class="bg-gray-900 p-6 mt-6 rounded-xl">
+  <h2 class="text-2xl font-bold mb-2">Cara Menggunakan Website</h2>
+  <p>Pertama kali buka web ini? Tenang aja, semuanya gampang kok.</p>
+  <p class="mt-2">Begitu lo masuk, langsung kelihatan IP server kita. Tinggal klik buat salin, terus lo bisa masuk ke GTA SAMP dan langsung sambung ke Honesty Theater dan lo harus whitelist dulu di wa atau discord.</p>
+  <p class="mt-2">Kalau lo mau ngobrol, cari temen main, atau cari info terbaru, tinggal pencet tombol Discord atau WhatsApp. Bahkan kita juga ada TikTok buat liat momen-momen seru dari server.</p>
+  <p class="mt-2">Scroll ke bawah buat baca cerita dibalik server ini dan kenalan sama tim yang ngebangun semuanya dari nol.</p>
+  <p class="mt-2">Pokoknya, website ini jadi pintu masuk lo ke dunia Honesty Theater. Cuma satu klik buat mulai petualangan lo di kota penuh drama dan aksi ini.</p>
+</div>
+
+
+  </div>  <footer>
+    &copy; 2025 Honesty Theater - #HONESTYONTOP.
+  </footer>
+  </body></html>
